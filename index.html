@@ -296,10 +296,8 @@
           <input
             type="text"
             id="playerTag"
-            placeholder="Your player #TAG"
-            required
+            placeholder="Your player #TAG (optional)"
           />
-          <div class="tooltip">Player tag is required</div>
         </div>
         <button type="submit" class="full-width">
           Notify me when it's ready!
@@ -386,13 +384,6 @@
           isValid = false;
         } else {
           hideTooltip(email);
-        }
-
-        if (!playerTag.value.trim()) {
-          showTooltip(playerTag, "Player tag is required");
-          isValid = false;
-        } else {
-          hideTooltip(playerTag);
         }
 
         if (isValid) {
